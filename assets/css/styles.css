@@ -1,0 +1,174 @@
+/* Notification Bar */
+#noty-holder {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    z-index: 1050;
+}
+
+.alert {
+    background-color: #D32F2F;
+    color: #ffffff;
+    padding: 10px 20px;
+    width: 100%;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.notify-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #ffffff;
+    font-size: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 50px; /* Space for the notification bar */
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    border-bottom: 1px solid #f2f2f2;
+    /* padding: 10px 20px; */
+    z-index: 1040;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo */
+.navbar-brand img {
+    max-height: 80px;
+    width: 250px;
+}
+
+/* Navigation Links */
+.navbar-nav {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-item {
+    margin: 0 15px;
+}
+
+/* Dropdown Container */
+.nav-item.dropdown {
+    position: relative;
+}
+
+/* Dropdown Menu *//* Dropdown Menu */
+.nav-item .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #ffffff; /* White background */
+    border: 1px solid #e0e0e0; /* Light border */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for a nice effect */
+    z-index: 1000;
+    list-style: none;
+    padding: 20px 0 !important;
+    margin: 0 !important;
+    min-width: 250px; /* Slightly wider for a cleaner look */
+    font-family: 'Roboto', Arial, sans-serif; /* Consistent font */
+}
+
+/* Dropdown Item */
+.nav-item .dropdown-menu .dropdown-item {
+    padding: 8px 20px; /* Increased padding for better clickability */
+    font-size: 17px; /* Slightly larger font */
+    color: #444; /* Neutral dark color */
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-family: 'Roboto', Arial, sans-serif; /* Same font as nav links */
+    margin: 15px 0px !important;
+    display: block; /* Ensure it's a block-level item */
+}
+
+/* Dropdown Item Hover */
+.nav-item .dropdown-menu .dropdown-item:hover {
+    background-color: #D32F2F; /* Highlight background */
+    color: #ffffff; /* White text on hover */
+}
+
+/* Show Dropdown on Hover */
+.nav-item.dropdown:hover .dropdown-menu {
+    display: block !important; /* Force the display on hover */
+}
+
+
+.nav-link {
+    color: #333; /* Dark Gray */
+    font-size: 22px; /* Increased font size */
+    font-weight: 500; /* Slightly bold for emphasis */
+    text-decoration: none;
+    font-family: 'Roboto', Arial, sans-serif; /* Nice font */
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #D32F2F; /* Highlight color for hover */
+}
+
+/* Call-to-Action and WhatsApp */
+.cta-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.whatsapp {
+    color: #25d366;
+    font-size: 48px;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+
+.whatsapp:hover {
+    transform: scale(1.1);
+}
+
+.btn {
+    color: #ffffff;
+    background-color: #D32F2F;
+    padding: 10px 20px;
+    font-size: 22px;
+    font-weight: 500;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    margin-right: 25px;
+    animation: glow-pulse 1.5s infinite; /* Add continuous animation */
+}
+
+.btn:hover {
+    background-color: #800d0d;
+}
+
+@keyframes glow-pulse {
+    0% {
+        box-shadow: 0 0 7px #D32F2F;
+    }
+    50% {
+        box-shadow: 0 0 18px #D32F2F;
+    }
+    100% {
+        box-shadow: 0 0 7px #D32F2F;
+    }
+}
