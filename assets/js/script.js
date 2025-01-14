@@ -81,3 +81,36 @@ document.addEventListener("DOMContentLoaded", function () {
     nextButton.addEventListener('click', updateButtonState);
     prevButton.addEventListener('click', updateButtonState);
 });
+// Our recents projects
+
+const cardProjects = document.getElementById('cardProjects');
+const prevBtn = document.getElementById('prevBtn');
+const nextBtn = document.getElementById('nextBtn');
+
+let currentIndex = 0;
+const cardCount = document.querySelectorAll('.card').length;
+const cardsVisible = 2; // Number of cards visible at once
+const cardWidth = cardProjects.querySelector('.card').offsetWidth + 20; // Card width + gap
+
+function updateButtons() {
+    prevBtn.disabled = currentIndex === 0;
+    nextBtn.disabled = currentIndex === cardCount - cardsVisible;
+}
+
+prevBtn.addEventListener('click', () => {
+    if (currentIndex > 0) {
+        currentIndex--;
+        cardProjects.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+        updateButtons();
+    }
+});
+
+nextBtn.addEventListener('click', () => {
+    if (currentIndex < cardCount - cardsVisible) {
+        currentIndex++;
+        cardProjects.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+        updateButtons();
+    }
+});
+
+updateButtons();
