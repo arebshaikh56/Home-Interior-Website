@@ -163,171 +163,135 @@
 }
 
 
-/* Section Title */
-.collection-tab-list{
-    margin-top: 20px;
+/* General Styles
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
 }
 
-.collection-tab-list a{
-    text-decoration: none;
-    padding: 0px 12px;
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+h1, h2 {
+    margin-bottom: 15px;
     color: #D32F2F;
-    font-size: 18px;
-    font-weight: 300;
 }
 
-.collection-tab-list a:hover{
-    color: rgb(150, 0, 0);
-}
+p {
+    color: #555;
+    margin-bottom: 20px;
+} */
 
-#modular-kitchen-design{
-    margin-bottom: 200px;
-}
-.collection-top-title h1 {
-    font-size: 3.5rem;
-    font-weight: 700;
+/* Hero Section */
+.contact-hero {
+    background-color: #f9f9f9;
+    color: #333;
+    padding: 30px 0;
     text-align: center;
+}
+
+.contact-hero h1 {
+    font-size: 3rem;
+    margin: 10px 0;
+}
+
+.contact-hero p {
+    font-size: 1.25rem;
+}
+
+/* Contact Section */
+.contact-section {
+    background-color: #f9f9f9;
+    padding: 30px 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.contact-info {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.contact-info ul {
+    list-style: none;
+    padding: 0;
+}
+
+.contact-info li {
     margin-bottom: 10px;
-}
-
-/* Modular Kitchen Designs Section */
-.collection-slider-title h2 {
-    font-size: 2.5rem;
-    font-weight: 600;
-    text-align: center;
-    margin-bottom: 80px;
     color: #333;
 }
 
-/* Carousel Container */
-.carousel-container {
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-    max-width: 1400px;
-    margin: 0 auto;
+.contact-form-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.carousel {
-    position: relative;
-    display: flex;
-}
-
-.carousel-track {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-}
-
-/* Carousel Item Styling */
-.item {
+.contact-form-container form {
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* Even spacing for content */
-    align-items: center;
-    height: 350px; /* Set a fixed height for the entire item */
-    width: 320px;
-    text-align: center;
-    background-color: #fff;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    margin: 0 15px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    margin-bottom: 5px;
+    display: block;
+    font-weight: bold;
+    color: #333;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
     padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
 }
 
-
-
-/* Set a fixed height and width for all images */
-.item img {
-    width: 100%; /* Fill the width of the container */
-    height: 200px; /* Set a fixed height */
-    object-fit: cover; /* Ensures the image is cropped proportionally */
-    border-radius: 8px;
+textarea {
+    resize: vertical;
 }
 
-
-/* Button Styling */
-/* .item h3 {
-    font-size: 16px;
-    font-weight: 500;
-    margin: 10px 0;
-    height: 40px; 
-    overflow: hidden; 
-    text-overflow: ellipsis;
-    white-space: nowrap;
-} */
-
-.get-qte-btn {
-    display: inline-block;
-    padding: 10px 20px;
+.submit-btn {
     background-color: #D32F2F;
     color: white;
-    text-decoration: none;
+    border: none;
+    padding: 10px 15px;
+    font-size: 1rem;
     border-radius: 5px;
-    margin-top: auto; /* Push button to the bottom */
-    margin-bottom: 10px;
-    transition: background-color 0.3s ease;
-}
-
-
-.get-qte-btn:hover {
-    background-color: #a50606;
-}
-
-/* Navigation Buttons */
-.carousel-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    font-size: 2rem;
-    padding: 10px;
     cursor: pointer;
-    z-index: 10;
-    border-radius: 50%;
     transition: background-color 0.3s ease;
 }
 
-.carousel-btn:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-}
-
-.carousel-btn.prev {
-    left: 10px;
-}
-
-.carousel-btn.next {
-    right: 10px;
-}
-
-/* View More Button */
-.view-all-collection-button-new {
-    text-align: center;
-    margin-top: 40px;
-}
-
-.view-all-collection-button-new a {
-    font-size: 19px;
-    color: white;
-    text-decoration: none;
-    font-weight: 600;
-    padding: 10px 20px;
-    background-color: #D32F2F;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-
-.view-all-collection-button-new a:hover {
+.submit-btn:hover {
     background-color: #b80e0e;
 }
 
-/* Footer Top Section */
+/* Footer */
+
+/* Footer Styles */
 .footer {
     font-family: 'Roboto', Arial, sans-serif;
     color: #fff;
     background-color: #333;
     padding: 20px 10px;
 }
+
+/* Footer Top Section */
 .footer-top {
     text-align: center;
     padding: 20px;
@@ -357,7 +321,8 @@
     background-color: #B71C1C;
 }
 
-/* Footer Links Section */
+/* Footer Links Section (Row Layout) */
+
 .footer-links{
     display: flex;
     align-items: center;
@@ -367,9 +332,11 @@
 .footer-links ul {
     list-style: none;
     padding: 0;
+    /* display: flex; */
+     /* Align items in a row */
     justify-content: center;
     margin: 20px 0;
-    flex-wrap: wrap;
+    flex-wrap: wrap; /* Ensure responsiveness */
 }
 
 .footer-links ul li {
@@ -387,17 +354,18 @@
     color: #D32F2F;
 }
 
-/* Footer Locations Section */
+/* Footer Locations Section (Horizontal Layout) */
 .footer-locations {
     padding: 20px;
     text-align: center;
-    background-color: #333;
+    background-color: #333; /* Optional background for contrast */
 }
 
 .footer-locations h3 {
     font-size: 24px;
     margin-bottom: 30px;
     color: #fff;
+    font-family: 'Roboto', Arial, sans-serif; /* Ensures consistent typography */
 }
 
 .footer-locations ul {
@@ -405,21 +373,76 @@
     padding: 0;
     margin: 0;
     display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-    align-items: center;
+    flex-wrap: wrap; /* Ensures responsiveness */
+    gap: 20px; /* Adds space between items */
+    justify-content: center; /* Centers the items */
+    align-items: center; /* Vertically centers the items */
 }
 
 .footer-locations li {
     font-size: 18px;
     color: #ccc;
-    margin: 0 10px;
+    font-family: 'Roboto', Arial, sans-serif;
+    margin: 0 10px; /* Adds horizontal spacing */
     text-align: left;
 }
 
 .footer-locations strong {
     color: #D32F2F;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 22px;
 }
+
+.footer-locations li:hover strong {
+    color: #fff; /* Optional hover effect for city names */
+    text-decoration: underline; /* Highlights on hover */
+}
+
+.footer-locations li:hover {
+    color: #eee; /* Optional hover effect for text */
+}
+
+
+
+/* Footer Bottom Section */
+.footer-bottom {
+    display: flex; /* Align items in a row */
+    justify-content: space-between; /* Spread content across the row */
+    align-items: center;
+    padding: 15px;
+    font-size: 14px;
+    background-color: #222;
+    flex-wrap: wrap; /* Make responsive */
+    text-align: center; /* Default for smaller screens */
+}
+
+.footer-bottom a {
+    color: #D32F2F;
+    text-decoration: none;
+}
+
+.footer-bottom a:hover {
+    text-decoration: underline;
+}
+
+/* Footer Social Icons (Horizontal Layout) */
+/* Footer Social Icons Section */
+.footer-social {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+}
+
+.footer-social a {
+    text-decoration: none;
+    color: #ccc;
+    font-size: 24px; /* Icon size */
+    margin: 0 15px;
+    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.footer-social a:hover {
+    color: #D32F2F;
+    transform: scale(1.2);
+}
+

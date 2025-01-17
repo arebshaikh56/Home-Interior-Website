@@ -26,6 +26,8 @@ function goToPreviousSlide() {
 nextButton.addEventListener('click', goToNextSlide);
 prevButton.addEventListener('click', goToPreviousSlide);
 
+
+
 //product of the week
 document.addEventListener("DOMContentLoaded", function () {
     const track = document.querySelector('.carousel-track');
@@ -81,6 +83,65 @@ document.addEventListener("DOMContentLoaded", function () {
     nextButton.addEventListener('click', updateButtonState);
     prevButton.addEventListener('click', updateButtonState);
 });
+
+//product of the week Furnitures
+document.addEventListener("DOMContentLoaded", function () {
+    const track = document.querySelector('.furniture-carousel-track');
+    const slides = Array.from(track.children);
+    const nextButton = document.querySelector('.furniture-carousel-button.next');
+    const prevButton = document.querySelector('.furniture-carousel-button.prev');
+    const slideWidth = slides[0].getBoundingClientRect().width; // Get updated slide width
+
+    let currentIndex = 0;
+
+    // Set the initial position of the slides
+    const setSlidePosition = (slide, index) => {
+        slide.style.left = slideWidth * index + 'px';
+    };
+    slides.forEach(setSlidePosition);
+
+    // Move the track to show the target slides
+    const moveToSlide = (track, currentIndex) => {
+        track.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+    };
+
+    // Adjusted logic for navigation
+    const maxIndex = slides.length - 4; // Only 4 images are visible at a time
+    const isNextDisabled = () => currentIndex >= maxIndex;
+    const isPrevDisabled = () => currentIndex <= 0;
+
+    // Click Next
+    nextButton.addEventListener('click', () => {
+        if (!isNextDisabled()) {
+            currentIndex++;
+            moveToSlide(track, currentIndex);
+        }
+    });
+
+    // Click Prev
+    prevButton.addEventListener('click', () => {
+        if (!isPrevDisabled()) {
+            currentIndex--;
+            moveToSlide(track, currentIndex);
+        }
+    });
+
+    // Optional: Disable buttons when no further slides are available
+    const updateButtonState = () => {
+        nextButton.disabled = isNextDisabled();
+        prevButton.disabled = isPrevDisabled();
+    };
+
+    // Initialize button state
+    updateButtonState();
+
+    // Update button state on clicks
+    nextButton.addEventListener('click', updateButtonState);
+    prevButton.addEventListener('click', updateButtonState);
+});
+
+
+
 // Our recents projects
 
 const cardProjects = document.getElementById('cardProjects');

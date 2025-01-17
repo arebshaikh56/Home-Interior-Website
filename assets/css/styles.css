@@ -1,3 +1,11 @@
+.whatsapp-main{
+    position: fixed;
+    bottom: 80px;
+    text-align: right;
+    right: 5px;
+    z-index: 1000;
+}
+
 /* Notification Bar */
 #noty-holder {
     width: 100%;
@@ -323,11 +331,15 @@
 }
 
 /* Title */
-h2 {
-    font-size: 28px;
+.text-center h2 {
+    font-size: 40px;
     color: white;
     margin-bottom: 10px;
+    margin-top: 0px;
     font-family: 'Roboto', Arial, sans-serif;
+}
+.text-center p{
+    font-size: 20px;
 }
 
 .section-subtitle {
@@ -352,6 +364,10 @@ h2 {
 }
 
 .carousel-track {
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+}
+.furniture-carousel-track {
     display: flex;
     transition: transform 0.3s ease-in-out;
 }
@@ -397,7 +413,7 @@ h2 {
     border-radius: 50%;
 }
 
-.carousel-button.prev {
+.carousel-button.prev{
     left: 10px;
 }
 
@@ -406,6 +422,32 @@ h2 {
 }
 
 .carousel-button:focus {
+    outline: none;
+}
+
+.furniture-carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 10;
+    border-radius: 50%;
+}
+
+.furniture-carousel-button.prev{
+    left: 10px;
+}
+
+.furniture-carousel-button.next {
+    right: 10px;
+}
+
+.furniture-carousel-button:focus {
     outline: none;
 }
 
