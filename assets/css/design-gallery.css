@@ -321,13 +321,15 @@
     background-color: #b80e0e;
 }
 
-/* Footer Top Section */
+/* Footer Styles */
 .footer {
     font-family: 'Roboto', Arial, sans-serif;
     color: #fff;
     background-color: #333;
     padding: 20px 10px;
 }
+
+/* Footer Top Section */
 .footer-top {
     text-align: center;
     padding: 20px;
@@ -357,7 +359,8 @@
     background-color: #B71C1C;
 }
 
-/* Footer Links Section */
+/* Footer Links Section (Row Layout) */
+
 .footer-links{
     display: flex;
     align-items: center;
@@ -367,9 +370,11 @@
 .footer-links ul {
     list-style: none;
     padding: 0;
+    /* display: flex; */
+     /* Align items in a row */
     justify-content: center;
     margin: 20px 0;
-    flex-wrap: wrap;
+    flex-wrap: wrap; /* Ensure responsiveness */
 }
 
 .footer-links ul li {
@@ -387,17 +392,18 @@
     color: #D32F2F;
 }
 
-/* Footer Locations Section */
+/* Footer Locations Section (Horizontal Layout) */
 .footer-locations {
     padding: 20px;
     text-align: center;
-    background-color: #333;
+    background-color: #333; /* Optional background for contrast */
 }
 
 .footer-locations h3 {
     font-size: 24px;
     margin-bottom: 30px;
     color: #fff;
+    font-family: 'Roboto', Arial, sans-serif; /* Ensures consistent typography */
 }
 
 .footer-locations ul {
@@ -405,21 +411,89 @@
     padding: 0;
     margin: 0;
     display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-    align-items: center;
+    flex-wrap: wrap; /* Ensures responsiveness */
+    gap: 20px; /* Adds space between items */
+    justify-content: center; /* Centers the items */
+    align-items: center; /* Vertically centers the items */
 }
 
 .footer-locations li {
     font-size: 18px;
     color: #ccc;
-    margin: 0 10px;
+    font-family: 'Roboto', Arial, sans-serif;
+    margin: 0 10px; /* Adds horizontal spacing */
     text-align: left;
 }
 
 .footer-locations strong {
     color: #D32F2F;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 22px;
 }
+
+.footer-locations li:hover strong {
+    color: #fff; /* Optional hover effect for city names */
+    text-decoration: underline; /* Highlights on hover */
+}
+
+.footer-locations li:hover {
+    color: #eee; /* Optional hover effect for text */
+}
+
+
+
+/* Footer Bottom Section */
+.footer-bottom {
+    display: flex; /* Align items in a row */
+    justify-content: space-between; /* Spread content across the row */
+    align-items: center;
+    padding: 15px;
+    font-size: 14px;
+    background-color: #222;
+    flex-wrap: wrap; /* Make responsive */
+    text-align: center; /* Default for smaller screens */
+}
+
+.footer-bottom a {
+    color: #D32F2F;
+    text-decoration: none;
+}
+
+.footer-bottom a:hover {
+    text-decoration: underline;
+}
+
+/* Footer Social Icons (Horizontal Layout) */
+/* Footer Social Icons Section */
+.footer-social {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+}
+
+.footer-social a {
+    text-decoration: none;
+    color: #ccc;
+    font-size: 24px; /* Icon size */
+    margin: 0 15px;
+    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.footer-social a:hover {
+    color: #D32F2F;
+    transform: scale(1.2);
+}
+
+.footer-links-mobile{
+    display: none;
+}
+.burger-menu{
+    display: none;
+}
+.menu-toggle{
+    display: none;
+}
+.toggle-submenu{
+    display: none;
+}
+

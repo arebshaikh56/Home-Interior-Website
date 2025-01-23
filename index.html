@@ -2,11 +2,12 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <meta name="description" content="Interior Design and Furniture Website" />
     <title>Home Interiors</title>
     <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"> -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="./assets/css/styles.css" />
   </head>
   <body>
@@ -23,18 +24,21 @@
           FLAT 25% OFF on Home Interiors. Hurry, Book Before 10th Jan, 2025!
         </div>
       </div>
-
-      <!-- Navbar -->
       <nav class="navbar">
+
+        <!-- Hamburger Menu -->
+        <button class="menu-toggle">☰</button>
+      
         <!-- Logo -->
         <a href="./index.html" class="navbar-brand" rel="home">
           <img src="./assets/logo.png.png" alt="Home Interior Logo" />
         </a>
-
+      
         <!-- Navigation Links -->
         <ul class="navbar-nav">
           <li class="nav-item dropdown">
-            <a href="./furniture.html" class="nav-link">Furnitures</a>
+            <span class="nav-link"><a class="nav-link" href="./furniture.html">Furnitures</a></span>
+            <button class="toggle-submenu">+</button>
             <ul class="dropdown-menu">
               <li><a href="#" class="dropdown-item">Sofa Set</a></li>
               <li><a href="#" class="dropdown-item">Wardrobe</a></li>
@@ -48,29 +52,26 @@
               <li><a href="#" class="dropdown-item">Living Room Designs</a></li>
             </ul>
           </li>
-
+      
           <!-- Design Gallery -->
           <li class="nav-item dropdown">
-            <a href="./design-gallery.html" class="nav-link">Design Gallery</a>
+            <span class="nav-link"><a class="nav-link" href="./design-gallery.html">Design Gallery</a></span>
+            <button class="toggle-submenu">+</button>
             <ul class="dropdown-menu">
-              <li><a href="#" class="dropdown-item">Living Room Desing</a></li>
-              <li><a href="#" class="dropdown-item">Modular Kitchen Design</a></li>
+              <li><a href="#" class="dropdown-item">Living Room Design</a></li>
+              <li><a href="./modular-kitchen.html" class="dropdown-item">Modular Kitchen Design</a></li>
               <li><a href="#" class="dropdown-item">Home Office Designs</a></li>
               <li><a href="#" class="dropdown-item">Kids Bedroom Designs</a></li>
               <li><a href="#" class="dropdown-item">Bathroom Designs</a></li>
               <li><a href="#" class="dropdown-item">Space Saving Designs</a></li>
               <li><a href="#" class="dropdown-item">Dining Room Designs</a></li>
               <li><a href="#" class="dropdown-item">1BHK Design</a></li>
-              <li><a href="#" class="dropdown-item">2BHK Desing</a></li>
+              <li><a href="#" class="dropdown-item">2BHK Design</a></li>
               <li><a href="#" class="dropdown-item">3BHK Design</a></li>
             </ul>
           </li>
-          <!-- <li class="nav-item">
-            <a href="#" class="nav-link">Recent Projects</a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link">Site Services</a>
-          </li> -->
+      
+          <!-- Other Links -->
           <li class="nav-item">
             <a href="./about-us.html" class="nav-link">About Us</a>
           </li>
@@ -78,27 +79,29 @@
             <a href="./contact-us.html" class="nav-link">Contact Us</a>
           </li>
         </ul>
-
+      
         <!-- WhatsApp and Call-to-Action -->
         <div class="cta-container">
-          <a href="#" class="whatsapp">
+          <a href="https://wa.me/919309851712" target="_blank" class="whatsapp">
             <i class="fab fa-whatsapp"></i>
           </a>
           <a href="#" class="btn">Get Free Estimate</a>
         </div>
+      
       </nav>
+      
     </header>
     <main>
       <!-- Hero Section (Carousel) -->
       <div class="hero-slider">
         <div class="hero-slide">
           <img
-            src="./assets/001.jpg"
+            src="./assets/010.jpg"
             alt="DesignCafe Offer: Flat 25% OFF on Home Interiors"
           />
         </div>
         <div class="hero-slide">
-          <img src="./assets/010.jpg" alt="Space-saving Home Interior Solutions" />
+          <img src="./assets/001.jpg" alt="Space-saving Home Interior Solutions" />
         </div>
         <div class="hero-slide">
           <img
@@ -120,10 +123,7 @@
       <div class="hero-section">
         <!-- Image Section -->
         <div class="hero-image">
-          <img
-            src="./assets/028.jpg"
-            alt="Modern minimalist living room with neutral tones, a chic chandelier, cozy seating, and stylish decor"
-          />
+          <img src="./assets/028.jpg" alt="Modern minimalist living room with neutral tones, a chic chandelier, cozy seating, and stylish decor"/>
         </div>
 
         <!-- Text Section -->
@@ -343,7 +343,7 @@
           <!-- View All Designs Button -->
           <div class="row">
             <div class="col-lg-12 text-center">
-              <a href="./design-gallery.html" class="btn btn-primary">View All Designs</a>
+              <a href="./design-gallery.html" class="btn-primary design-btn">View All Designs</a>
             </div>
           </div>
         </div>
@@ -580,7 +580,7 @@
           <!-- View All Designs Button -->
           <div class="row">
             <div class="col-lg-12 text-center">
-              <a href="/furniture.html" class="btn btn-primary">View All Products</a>
+              <a href="/furniture.html" class="design-btn btn-primary">View All Products</a>
             </div>
           </div>
         </div>
@@ -776,13 +776,38 @@
             <li><a href="#">Contact Us</a></li>
           </ul>
         </div>
+        
+        <div class="footer-links-mobile">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Sofa Set</a></li>
+            <li><a href="#">Wardrobe</a></li>
+            <li><a href="#">Sofa Cumbed</a></li>
+            <li><a href="#">Dining Table</a></li>
+            <li><a href="#">Centre Table</a></li>
+            <li><a href="#">Bedroom Set</a></li>
+            <li><a href="#">Chairs</a></li>
+            <li><a href="#">Recliners</a></li>
+          </ul>
+          <ul>
+            <li><a href="#">T.V Wall Unit</a></li>
+            <li><a href="#">Modular Kitchen Design</a></li>
+            <li><a href="#">Design Gallery</a></li>
+            <li><a href="#">Custom Modular Kitchen</a></li>
+            <li><a href="#">Bedroom Design</a></li>
+            <li><a href="#">Living Room Design</a></li>
+            <li><a href="#">Dining Room Design</a></li>
+            <li><a href="#">1 BHK Interior Designs</a></li>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
+        </div>
 
         <div class="footer-locations">
           <h3>Our Experience Centres</h3>
           <ul>
             <li><strong>Bengaluru:</strong> MG Road | Whitefield | HSR</li>
-            <li><strong>Mumbai:</strong> Thane | Navi Mumbai</li>
-            <li><strong>Pune:</strong> Yerwada</li>
+            <li><strong>Mumbai:</strong> Goregaon</li>
+            <li><strong>Pune:</strong> Pisoli</li>
             <li><strong>Hyderabad:</strong> Gachibowli | Banjara Hills</li>
             <li><strong>Chennai:</strong> Anna Salai | OMR</li>
             <li><strong>Ahmedabad:</strong> Thaltej</li>

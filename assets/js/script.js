@@ -175,3 +175,43 @@ nextBtn.addEventListener('click', () => {
 });
 
 updateButtons();
+
+//responsivedocument.addEventListener('DOMContentLoaded', () => {
+  // Toggle the navbar menu
+  const menuToggle = document.querySelector('.menu-toggle');
+  const navbarNav = document.querySelector('.navbar-nav');
+
+  menuToggle.addEventListener('click', () => {
+    navbarNav.classList.toggle('active');
+    menuToggle.textContent = navbarNav.classList.contains('active') ? '✖' : '☰';
+  });
+
+  // Toggle submenus
+  const submenuToggles = document.querySelectorAll('.toggle-submenu');
+
+  submenuToggles.forEach((toggle) => {
+    toggle.addEventListener('click', () => {
+      const dropdownMenu = toggle.parentElement.querySelector('.dropdown-menu');
+
+      // Check if the current submenu is already active
+      const isActive = dropdownMenu.classList.contains('active');
+
+      // Close all other dropdown menus and reset their toggle buttons
+      document.querySelectorAll('.dropdown-menu').forEach((menu) => {
+        menu.classList.remove('active');
+      });
+      document.querySelectorAll('.toggle-submenu').forEach((btn) => {
+        btn.textContent = '+';
+      });
+
+      // If the clicked submenu was not active, open it and set the toggle to '-'
+      if (!isActive) {
+        dropdownMenu.classList.add('active');
+        toggle.textContent = '-';
+      } else {
+        // If the clicked submenu was active, close it and reset the toggle
+        dropdownMenu.classList.remove('active');
+        toggle.textContent = '+';
+      }
+    });
+  });

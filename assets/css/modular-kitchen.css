@@ -437,3 +437,18 @@
     color: #D32F2F;
     transform: scale(1.2);
 }
+
+.footer-links-mobile{
+    display: none;
+}
+.burger-menu{
+    display: none;
+}
+.menu-toggle{
+    display: none;
+}
+.toggle-submenu{
+    display: none;
+}
+
+

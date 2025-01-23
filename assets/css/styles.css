@@ -3,7 +3,7 @@
     bottom: 80px;
     text-align: right;
     right: 5px;
-    z-index: 1000;
+    z-index: 10000;
 }
 
 /* Notification Bar */
@@ -170,13 +170,26 @@
     }
 }
 
+.burger-menu{
+    display: none;
+}
+.menu-toggle{
+    display: none;
+}
+.toggle-submenu{
+    display: none;
+}
+.footer-links-mobile{
+    display: none;
+}
 
 /* Hero Slider Container */
 .hero-slider {
     position: relative;
     width: 100%;
     height: 85vh; /* Full height of the viewport */
-    overflow: hidden; /* Hide any overflow */
+    /* overflow: hidden;  */
+    /* Hide any overflow */
 }
 
 /* Hero Slide */
@@ -184,6 +197,7 @@
     display: none; /* Hide all slides initially */
     width: 100%;
     height: 100%; /* Take full height */
+    z-index: -1;
 }
 
 .hero-slide img {
@@ -193,6 +207,7 @@
     object-position: center; /* Keep the center of the image as the focal point */
     border-radius: 8px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+
 }
 
 /* Navigation buttons */
@@ -452,7 +467,8 @@
 }
 
 /* Button Styling */
-.btn-primary {
+.design-btn{
+    font-size: 25px;
     padding: 10px 20px;
     background-color: #ffffff;
     color: #D32F2F;
@@ -460,9 +476,8 @@
     text-decoration: none;
     font-family: 'Roboto', Arial, sans-serif;
 }
-
-.btn-primary:hover {
-    background-color: #cbcdcf;
+.design-btn:hover{
+    background-color: cbcdcf;
 }
 
 
@@ -817,7 +832,8 @@
 } */
 
 
-/* visit */.projects {
+/* visit */
+.projects {
     max-width: 100%;
     margin: 0 auto;
     background-color: #d32f2f;
@@ -923,3 +939,715 @@
     background-color: #d32f2f;
     cursor: not-allowed;
 }
+
+
+
+/* Responsive Navbar Styles */
+@media(max-width:1300px){
+    
+    .steps-headline h1{
+        font-size: 31px;
+    }
+    .hero-section {
+    gap: 50px; 
+ }
+
+.hero-image img {
+    width: 100%; 
+    max-width: 500px; 
+    height: 550px;
+    object-fit: cover; 
+}
+
+.text-section {
+    max-width: 480px;
+}
+
+
+.text-section h4 {
+    font-size: 28px;
+}
+
+.text-section p {
+    font-size: 14px;
+}
+
+.steps-list {
+    margin-top: 12px;
+}
+
+.steps-list li {
+    font-size: 14px;
+}
+
+.steps-list strong {
+    font-size: 20px;
+}
+
+.get-started-btn {
+    font-size: 19px;
+
+}
+}
+
+@media(max-width:1150px){
+    .navbar-brand img {
+        max-height: 60px;
+        width: 205px;
+    }
+    .nav-link {
+        color: #333; /* Dark Gray */
+        font-size: 18px; /* Increased font size */
+        font-weight: 500; /* Slightly bold for emphasis */
+        text-decoration: none;
+        font-family: 'Roboto', Arial, sans-serif; /* Nice font */
+        transition: color 0.3s ease;
+    }
+    .whatsapp {
+        color: #25d366;
+        font-size: 40px;
+        text-decoration: none;
+        transition: transform 0.3s ease;
+    }
+    
+    .whatsapp:hover {
+        transform: scale(1.1);
+    }
+    
+    .btn {
+        color: #ffffff;
+        background-color: #D32F2F;
+        padding: 10px 20px;
+        font-size: 18px;
+        font-weight: 500;
+        border-radius: 4px;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+        margin-right: 25px;
+        animation: glow-pulse 1.5s infinite; /* Add continuous animation */
+    }
+    
+    .btn:hover {
+        background-color: #800d0d;
+    }
+    .alert {
+        background-color: #D32F2F;
+        color: #ffffff;
+        padding: 10px 20px;
+        width: 100%;
+        text-align: center;
+        font-family: Arial, sans-serif;
+        font-size: 15px;
+        position: relative;
+        box-sizing: border-box;
+    }
+    
+    .notify-close {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        color: #ffffff;
+        font-size: 15px;
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+
+    /* hero slider */
+    .hero-slider {
+        position: relative;
+        width: 100%;
+        height: 65vh;
+    }
+    /* 5 Steps */
+    .steps-headline h1{
+        font-size: 28px;
+    }
+
+    .hero-section{
+        gap: 45px;
+    }
+    .hero-image img {
+        width: 100%; 
+        max-width: 420px; 
+        height: 450px;
+        object-fit: cover; 
+    }
+    .text-section {
+        max-width: 400px;
+    }
+    .text-section h4 {
+        font-size: 25px;
+    }
+    .text-section p {
+        font-size: 12px;
+    }
+    
+    .steps-list {
+        margin-top: 10px;
+    }
+    
+    .steps-list li {
+        font-size: 12px;
+    }
+    
+    .steps-list strong {
+        font-size: 18px;
+    }
+    
+    .get-started-btn {
+        font-size: 17px;
+    } 
+    /* product of the week */
+    .text-center h2{
+        font-size: 32px;
+    }
+    
+.carousel {
+    width: 100%;
+    max-width: 1500px;
+
+}
+
+/* Ensuring uniform image size */
+.carousel-slide img {
+    max-width: 350px;      /* Limits the maximum width for consistency */
+    height: 230px;         /* Fixed height to maintain uniform appearance */
+}
+
+
+.design-title {
+    font-size: 14px;
+}
+.design-btn{
+    font-size: 20px;
+}
+/* footer links */
+
+.footer-links {
+    justify-content: space-between; /* Spread out sections on medium screens */
+    gap: 10px; /* Reduce gap for smaller screens */
+}
+
+.footer-links ul {
+    justify-content: space-around; /* Evenly distribute links within each section */
+}
+
+.footer-links ul li a {
+    font-size: 18px; /* Slightly smaller font size for better fit */
+}
+
+
+}
+
+@media(max-width:960px){
+    .navbar-brand img {
+        max-height: 50px;
+        width: 180px;
+    }
+    .nav-link {
+        color: #333; /* Dark Gray */
+        font-size: 16px; /* Increased font size */
+        font-weight: 500; /* Slightly bold for emphasis */
+        text-decoration: none;
+        font-family: 'Roboto', Arial, sans-serif; /* Nice font */
+        transition: color 0.3s ease;
+    }
+    .whatsapp {
+        color: #25d366;
+        font-size: 30px;
+        text-decoration: none;
+        transition: transform 0.3s ease;
+    }
+    
+    .whatsapp:hover {
+        transform: scale(1.1);
+    }
+    
+    .btn {
+        color: #ffffff;
+        background-color: #D32F2F;
+        padding: 10px 20px;
+        font-size: 15px;
+        font-weight: 500;
+        border-radius: 4px;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+        margin-right: 25px;
+        animation: glow-pulse 1.5s infinite; /* Add continuous animation */
+    }
+    
+    .btn:hover {
+        background-color: #800d0d;
+    }
+    .alert {
+        background-color: #D32F2F;
+        color: #ffffff;
+        padding: 10px 20px;
+        width: 100%;
+        text-align: center;
+        font-family: Arial, sans-serif;
+        font-size: 12px;
+        position: relative;
+        box-sizing: border-box;
+    }
+    
+    .notify-close {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        color: #ffffff;
+        font-size: 12px;
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+    
+}
+
+
+@media (max-width: 870px) {
+/* Navbar container */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 5px 20px;
+    position: relative;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  /* Hamburger menu button */
+  .menu-toggle {
+    display: flex;
+    font-size: 30px;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* Navbar brand (logo) */
+  .navbar-brand img {
+    max-height: 60px;
+  }
+  
+  /* Navbar links (hidden by default) */
+  .navbar-nav {
+    display: none;
+    flex-direction: column;
+    background-color: #fff;
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+  }
+  
+  /* Navbar active */
+  .navbar-nav.active {
+    display: flex;
+  }
+  
+  /* Dropdown menu */
+  .nav-item {
+    position: relative;
+    padding: 20px 20px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .nav-link {
+    display: inline-block;
+    font-size: 24px;
+  }
+  
+  .dropdown-menu {
+    display: none;
+    padding-left: 20px;
+    margin-top: 10px;
+  }
+  
+  .dropdown-menu.active {
+    display: block;
+  }
+  .dropdown-item{
+    font-size: 25px;
+    font-weight: 500;
+  }
+  .nav-item.dropdown{
+    display: flex;
+    justify-content: center;
+  }
+  /* Toggle submenu button */
+  .toggle-submenu {
+    display: flex;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 26px;
+    font-weight: 700;
+    margin-left: auto;
+  }
+  
+  /* Call-to-action buttons */
+  .cta-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .cta-container .whatsapp {
+    color: #25d366;
+    font-size: 45px;
+  }
+  
+  .cta-container .btn {
+    background-color: #007bff;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    display: none;
+  }
+  
+  .cta-container .btn:hover {
+    background-color: #0056b3;
+  }
+
+  /* main */
+  /* hero slide  */
+  
+    /* hero slider */
+    .hero-slider {
+        position: relative;
+        width: 100%;
+        height: 55vh;
+
+}
+
+/* 5 Steps */
+    .hero-section {
+        flex-direction: column; /* Stack items vertically */
+        gap: 20px; /* Reduce the gap between items */
+        padding: 15px; /* Adjust padding for smaller screens */
+    }
+
+    /* Image Section */
+    .hero-image img {
+        max-width: 100%; /* Ensure the image fits within the container */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    /* Text Section */
+    .text-section {
+        max-width: 100%; /* Allow text to take full width */
+        padding: 0; /* Remove padding */
+    }
+
+    .text-section h4 {
+        font-size: 28px; /* Adjust font size for smaller screens */
+    }
+
+    .text-section p {
+        font-size: 14px; /* Reduce paragraph font size */
+        line-height: 1.4; /* Adjust line height for better readability */
+    }
+
+    .steps-list li {
+        font-size: 15px; /* Reduce font size for list items */
+    }
+
+    .steps-list strong {
+        font-size: 20px; /* Adjust strong text font size */
+    }
+
+    .get-started-btn {
+        font-size: 18px; /* Adjust button font size */
+        width: 100px;
+        padding: 10px 16px; /* Adjust button padding */
+        display: block; /* Ensure the button behaves like a block element */
+        margin: 15px auto; /* Center the button horizontally */
+        text-align: center; /* Center text inside the button */
+    }
+    /* product of the week */
+    .text-center h2{
+        font-size: 22px;
+    }
+    .text-center p{
+        font-size: 18px;
+    }
+    .carousel-slide {
+        flex: 0 0 50%; /* 25% width for 4 images per row */
+        padding: 5px;
+
+    }
+    .carousel-button, 
+    .furniture-carousel-button {
+        font-size: 20px; /* Slightly smaller font size */
+        padding: 8px; /* Adjust padding for smaller size */
+    }
+
+    .carousel-button.prev,
+    .furniture-carousel-button.prev {
+        left: 5px; /* Adjust position for smaller screens */
+    }
+
+    .carousel-button.next,
+    .furniture-carousel-button.next {
+        right: 5px; /* Adjust position for smaller screens */
+    }
+
+    /* Adjust overall padding and spacing */
+    .carousel {
+        padding: 10px 0; /* Reduce padding for smaller screens */
+    }
+
+
+
+    .carousel-slide img {
+        max-width: 100%;    
+        height: 180px;    
+        object-fit: cover;   
+    }
+    /* why choose us */
+    .choose-section {
+        padding: 20px 0; /* Reduce padding for smaller screens */
+        height: auto; /* Allow height to adjust dynamically */
+    }
+
+    .sectionhead {
+        font-size: 1.5rem; /* Reduce font size for the headline */
+    }
+
+    /* Carousel Wrapper */
+    .choose-carousel-wrapper {
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+    }
+
+    /* Carousel */
+    .choose-carousel {
+        display: flex;
+        animation: marquee 20s linear infinite;
+        width: calc(150px * 6 * 2); /* Adjust width for smaller items */
+    }
+
+    .choose-item {
+        flex: 0 0 150px; /* Smaller width for each item */
+        height: auto; /* Allow height to adjust dynamically */
+        width: auto; /* Make width flexible */
+        padding: 10px; /* Reduce padding for smaller items */
+        margin: 20px 5px; /* Reduce margins for compact layout */
+    }
+
+    .choose-item img {
+        width: 60px; /* Reduce image size */
+        height: 60px; /* Maintain aspect ratio */
+        margin-bottom: 8px; /* Adjust spacing */
+    }
+
+    .choose-item p {
+        font-size: 0.9rem; /* Reduce font size for text */
+    }
+
+    /* Adjust animation for smaller screens */
+    @keyframes marquee {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(-100%); /* Adjust to account for fewer visible items */
+        }
+    }
+
+     /* Projects Section */
+     .projects-title{
+        font-size: 35px;
+     }
+     .projects-title2{
+        font-size: 30px;
+        margin-bottom: 15px;
+     }
+    .projects {
+        padding: 30px 10px;
+        overflow-x: auto; /* Enable horizontal scrolling */
+        white-space: nowrap; /* Prevent wrapping of flex items */
+    }
+
+    .card-projects {
+        display: flex;
+        flex-wrap: nowrap; /* Ensure items stay in a single row */
+        gap: 10px; /* Reduce the gap for smaller screens */
+    }
+
+    .card {
+        width: 80%; /* Reduce card width to fit more cards on screen */
+        max-width: 300px; /* Limit maximum width */
+        flex-shrink: 0; /* Prevent shrinking of cards */
+    }
+
+    .card-image {
+        height: 200px; /* Adjust image height */
+    }
+
+    .card-body h3 {
+        font-size: 1em; /* Adjust font size for headings */
+    }
+
+    .carousel-nav {
+        display: none; /* Hide navigation buttons for mobile */
+    }
+    /* Footer */
+    .footer-top {
+        padding: 15px; /* Reduce padding for smaller screens */
+    }
+
+    .footer-title {
+        font-size: 28px; /* Reduce title size */
+    }
+
+    .footer-btn {
+        font-size: 18px; /* Adjust button font size */
+        padding: 8px 16px; /* Adjust button padding */
+    }
+    /* footer links */
+
+     .footer-links{
+        display: none;
+     }
+     
+.footer-links-mobile{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.footer-links-mobile ul {
+    list-style: none;
+    padding: 0;
+    /* display: flex; */
+     /* Align items in a row */
+    justify-content: center;
+    margin: 20px 0;
+    flex-wrap: wrap; /* Ensure responsiveness */
+}
+
+.footer-links-mobile ul li {
+    margin: 0 15px;
+    padding: 8px 0px;
+}
+
+.footer-links-mobile ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.footer-links-mobile ul li a:hover {
+    color: #D32F2F;
+}
+    .footer-links-mobile {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* display: inline; */
+        font-size: 14px; /* Reduce font size for smaller screens */
+    }
+
+    /* footer locations */
+
+    .footer-locations h3 {
+        font-size: 20px; /* Reduce title font size */
+        text-align: center; /* Center align the title */
+    }
+
+    .footer-locations ul {
+        gap: 0px; /* Reduce spacing between list items */
+        justify-content: center; /* Align items to the center */
+        padding: 0;
+    }
+
+    .footer-locations li {
+        font-size: 16px; /* Font size for smaller screens */
+        display: flex; /* Use flexbox for inline display of city and address */
+        align-items: center; /* Vertically align city names and addresses */
+        width: 100%; /* Ensure it spans the full container width */
+        max-width: 400px; /* Optional: Limit the maximum width */
+        margin: 0 auto 5px auto; /* Center-align each item and add spacing below */
+        padding: 8px 15px; /* Add padding for better readability */
+    }
+
+    .footer-locations strong {
+        font-size: 18px; /* Emphasize city names */
+        color: #D32F2F; /* Highlight the city name */
+        margin-right: 10px; /* Add spacing between the city name and address */
+        flex-shrink: 0; /* Ensure the city name doesn’t shrink */
+    }
+
+    .footer-locations span {
+        font-size: 16px; /* Font size for the address */
+        color: #ccc; /* Address text color */
+        text-align: left; /* Align address text to the left */
+        flex-grow: 1; /* Allow the address to take up remaining space */
+        overflow: hidden; /* Hide overflow text if needed */
+        text-overflow: ellipsis; /* Add ellipsis for long addresses */
+        white-space: nowrap; /* Prevent address from wrapping to a new line */
+    }
+    /* footer location */
+    
+.footer-social {
+    text-align: center;
+    padding: 20px 5px;
+    background-color: #333;
+}
+
+.footer-social a {
+    text-decoration: none;
+    color: #ccc;
+    font-size: 20px; /* Icon size */
+    margin: 0 8px;
+    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+/* footer banner */
+.footer-banner {
+    height: 300px; /* Reduce height for smaller screens */
+}
+
+.book-consultation-section {
+    padding: 15px;
+    max-width: 95%; /* Allow more flexibility */
+}
+
+.book-consultation-section h2 {
+    font-size: 1.5rem; /* Reduce heading size */
+    margin-bottom: 15px;
+}
+
+.get-started-cta .cta-btn {
+    font-size: 0.9rem; /* Slightly smaller button text */
+    padding: 10px 25px; /* Adjust padding for smaller screens */
+}
+}
+
+
+@media (max-width: 480px) {
+    .footer-banner {
+        height: 250px; /* Further reduce height for extra small screens */
+    }
+
+    .book-consultation-section h2 {
+        font-size: 1.2rem; /* Smaller heading size */
+    }
+
+    .get-started-cta .cta-btn {
+        font-size: 0.85rem; /* Smaller button text */
+        padding: 8px 20px; /* Adjust padding */
+    }
+}
+
+
+
+
+
